@@ -1,0 +1,11 @@
+1666071240848	Rename package 'com.example.demo'
+1666071258346	Rename package 'com.neosoft.controller'
+1666071273255	Rename package 'com.neosoft.model'
+1666071343672	Rename package 'com.banking.demo'
+1666071421778	Rename type 'TransactionService'
+1666073445619	Rename type 'TransactionController'
+1666073465520	Rename type 'Transaction'
+1666073492055	Rename type 'TransactionRepository'
+1666073506715	Rename type 'TransactionService'
+1666079977617	Rename type 'Transfer'
+1666080124686	Delete element

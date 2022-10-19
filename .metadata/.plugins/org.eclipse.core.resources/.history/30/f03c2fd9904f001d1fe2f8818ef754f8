@@ -1,0 +1,18 @@
+package com.banking.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import com.banking.model.CreateAccount;
+ 
+
+public interface CreateAccountRepository extends JpaRepository<CreateAccount, Integer> {
+	
+	@Query("update CreateAccount c set c.balance = c.balance + ?2 where c.account_no = ?1 ")
+	public int addBalance(long toAccount, double amount);
+	
+	@Query("update CreateAccount c set c.balance = c.balance - ?1 where c.account_no = ?1 ")
+	public int subtractBalance(long fromAccount, double amount);
+	
+
+}

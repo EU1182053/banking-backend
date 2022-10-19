@@ -1,0 +1,83 @@
+package com.banking.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Transfer {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	private long reference_id;
+	
+	private int from_account;
+	private int to_account;
+	private double amount;
+	private String transaction_date;
+	private String maturity_instructions;
+	private String remark;
+	
+	
+	public Transfer() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Transfer(int from_account, int to_account, double amount, String transaction_date,
+			String maturity_instructions, String remark) {
+		super();
+		this.from_account = from_account;
+		this.to_account = to_account;
+		this.amount = amount;
+		this.transaction_date = transaction_date;
+		this.maturity_instructions = maturity_instructions;
+		this.remark = remark;
+	}
+	@Override
+	public String toString() {
+		return "Transfer [from_account=" + from_account + ", to_account=" + to_account + ", amount=" + amount
+				+ ", transaction_date=" + transaction_date + ", maturity_instructions=" + maturity_instructions
+				+ ", remark=" + remark + "]";
+	}
+	public int getFrom_account() {
+		return from_account;
+	}
+	public void setFrom_account(int from_account) {
+		this.from_account = from_account;
+	}
+	public int getTo_account() {
+		return to_account;
+	}
+	public void setTo_account(int to_account) {
+		this.to_account = to_account;
+	}
+	public double getAmount() {
+		return amount;
+	}
+	public void setAmount(double amount) {
+		this.amount = amount;
+	}
+	public String getTransaction_date() {
+		return transaction_date;
+	}
+	public void setTransaction_date(String transaction_date) {
+		this.transaction_date = transaction_date;
+	}
+	public String getMaturity_instructions() {
+		return maturity_instructions;
+	}
+	public void setMaturity_instructions(String maturity_instructions) {
+		this.maturity_instructions = maturity_instructions;
+	}
+	public String getRemark() {
+		return remark;
+	}
+	public void setRemark(String remark) {
+		this.remark = remark;
+	}
+	
+	
+	
+
+}

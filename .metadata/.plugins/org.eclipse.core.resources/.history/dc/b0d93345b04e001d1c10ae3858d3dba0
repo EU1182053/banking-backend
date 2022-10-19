@@ -1,0 +1,47 @@
+package com.banking.model;
+
+public class Beneficiary {
+
+	private String ben_name;
+
+	private int account_no;
+
+	private String nickname;
+
+	public String getBen_name() {
+		return ben_name;
+	}
+
+	public void setBen_name(String ben_name) {
+		this.ben_name = ben_name;
+	}
+
+	public int getAccount_no() {
+		return account_no;
+	}
+
+	public void setAccount_no(int account_no) {
+		this.account_no = account_no;
+	}
+
+	public String getNickname() {
+		return nickname;
+	}
+
+	@Override
+	public String toString() {
+		return "Beneficiary [ben_name=" + ben_name + ", account_no=" + account_no + ", nickname=" + nickname + "]";
+	}
+
+	public Beneficiary(String ben_name, int account_no, String nickname) {
+		super();
+		this.ben_name = ben_name;
+		this.account_no = account_no;
+		this.nickname = nickname;
+	}
+
+	public void setNickname(String nickname) {
+		this.nickname = nickname;
+	}
+
+}

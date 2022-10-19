@@ -1,0 +1,25 @@
+package com.banking.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.banking.model.Beneficiary;
+import com.banking.service.BeneficiaryService;
+
+@RestController
+@RequestMapping("/banking")
+public class BenController {
+
+	@Autowired
+	private BeneficiaryService beneficiaryservice;
+
+	@PostMapping(value = "/saveBeneficiary")
+	public Beneficiary saveProduct(@RequestBody Beneficiary beneficiary) {
+
+		Beneficiary ben = beneficiaryservice.save(beneficiary);
+		return ben;
+	}
+}

@@ -1,0 +1,66 @@
+package com.banking.controller;
+
+public class BenController {
+	private double balance;
+	private int cust_id;
+	private double transfer_amount;
+	private int transaction_id;
+	private int account_no;
+
+	public int getTransaction_id() {
+		return transaction_id;
+	}
+
+	public void setTransaction_id(int transaction_id) {
+		this.transaction_id = transaction_id;
+	}
+
+	public int getAccount_no() {
+		return account_no;
+	}
+
+	public void setAccount_no(int account_no) {
+		this.account_no = account_no;
+	}
+
+	public double getBalance() {
+		return balance;
+	}
+
+	public void setBalance(double balance) {
+		this.balance = balance;
+	}
+
+	public int getCust_id() {
+		return cust_id;
+	}
+
+	public void setCust_id(int cust_id) {
+		this.cust_id = cust_id;
+	}
+
+	public double getTransfer_amount() {
+		return transfer_amount;
+	}
+
+	public void setTransfer_amount(double transfer_amount) {
+		this.transfer_amount = transfer_amount;
+	}
+
+	@Override
+	public String toString() {
+		return "TransactionController [transaction_id=" + transaction_id + ", account_no=" + account_no + ", balance="
+				+ balance + ", cust_id=" + cust_id + ", transfer_amount=" + transfer_amount + "]";
+	}
+
+	public BenController(int transaction_id, int account_no, double balance, int cust_id,
+			double transfer_amount) {
+		super();
+		this.transaction_id = transaction_id;
+		this.account_no = account_no;
+		this.balance = balance;
+		this.cust_id = cust_id;
+		this.transfer_amount = transfer_amount;
+	}
+
+}
