@@ -1,0 +1,56 @@
+package com.banking.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "self_transaction_details")
+public class SelfTransaction {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int transaction_id;
+	
+	private long account_no;
+	private String transaction_type;
+	private double amount;
+	
+	@Override
+	public String toString() {
+		return "SelfTransaction [transaction_id=" + transaction_id + ", account_no=" + account_no
+				+ ", transaction_type=" + transaction_type + ", amount=" + amount + "]";
+	}
+	public SelfTransaction() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public int getTransaction_id() {
+		return transaction_id;
+	}
+	public void setTransaction_id(int transaction_id) {
+		this.transaction_id = transaction_id;
+	}
+	public long getAccount_no() {
+		return account_no;
+	}
+	public void setAccount_no(long account_no) {
+		this.account_no = account_no;
+	}
+	public String getTransaction_type() {
+		return transaction_type;
+	}
+	public void setTransaction_type(String transaction_type) {
+		this.transaction_type = transaction_type;
+	}
+	public double getAmount() {
+		return amount;
+	}
+	public void setAmount(double amount) {
+		this.amount = amount;
+	}
+	
+	
+}

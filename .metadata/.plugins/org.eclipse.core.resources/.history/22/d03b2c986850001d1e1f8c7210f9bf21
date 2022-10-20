@@ -1,0 +1,17 @@
+package com.banking.service;
+
+import org.springframework.stereotype.Service;
+
+import com.banking.model.SelfTransaction;
+import com.banking.repository.SelfTransactionRepository;
+
+@Service
+public class SelfTransactionService {
+
+	SelfTransactionRepository selftransactionrepository;
+	public SelfTransaction save(SelfTransaction selftransaction) {
+		// TODO Auto-generated method stub
+		return selftransactionrepository.save(selftransaction);
+	}
+
+}

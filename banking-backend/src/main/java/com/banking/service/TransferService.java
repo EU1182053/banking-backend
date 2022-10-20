@@ -20,7 +20,7 @@ public class TransferService {
 		return transferrepository.save(transfer);
 	}
 	
-	public List<Transfer> searchByAccountNo(int account_no){
+	public List<Transfer> searchByAccountNo(long account_no){
 		
 		
 		return transferrepository.listByAccountNo(account_no);

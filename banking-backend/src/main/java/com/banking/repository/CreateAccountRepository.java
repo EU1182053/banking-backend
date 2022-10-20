@@ -20,6 +20,9 @@ public interface CreateAccountRepository extends JpaRepository<CreateAccount, In
 	@Transactional
 	@Query("update CreateAccount c set c.balance = c.balance - ?2 where c.account_no = ?1 ")
 	Integer subtractBalance(long fromAccount, double amount);
+
+	@Query("select c from CreateAccount c where account_no = :account_no")
+	CreateAccount getDetailsByAccountNo(long account_no);
 	
 
 }

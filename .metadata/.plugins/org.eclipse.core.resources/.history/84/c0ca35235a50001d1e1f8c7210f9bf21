@@ -1,0 +1,58 @@
+package com.banking.model;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="acc_details")
+public class CreateAccount {
+	@Id
+	private long account_no;
+	
+	private String name; 
+	private String account_type;
+	private double balance;
+	public CreateAccount() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	public long getAccount_no() {
+		return account_no;
+	}
+	public void setAccount_no(long account_no) {
+		this.account_no = account_no;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public CreateAccount(String name, String account_type, double balance) {
+		super();
+		this.name = name;
+		this.account_type = account_type;
+		this.balance = balance;
+	}
+	@Override
+	public String toString() {
+		return "CreateAccount [account_no=" + account_no + ", name=" + name + ", account_type=" + account_type
+				+ ", balance=" + balance + "]";
+	}
+	public String getAccount_type() {
+		return account_type;
+	}
+	public void setAccount_type(String account_type) {
+		this.account_type = account_type;
+	}
+	public double getBalance() {
+		return balance;
+	}
+	public void setBalance(double balance) {
+		this.balance = balance;
+	}
+	
+	
+}

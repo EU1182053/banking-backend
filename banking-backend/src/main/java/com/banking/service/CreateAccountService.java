@@ -25,6 +25,11 @@ public class CreateAccountService {
 		
 		return createaccountrepository.subtractBalance(fromAccount, amount);
 	}
+
+	public CreateAccount getDetailsByAccountNo(long account_no) {
+		// TODO Auto-generated method stub
+		return createaccountrepository.getDetailsByAccountNo(account_no);
+	}
 	
 	
 
